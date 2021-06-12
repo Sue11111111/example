@@ -28,6 +28,9 @@ Route::get('/contact', function () {
 Route::get('/news)', function () {
     return ('ข่าว');
 });
-Route::get('/news/{id}', function () {
-    return ('ข่าว');
+Route::get('/news/{id}', function ($id) {
+    return "ข่าวที่ $id";
+});
+Route::get('/sum/{num1}/{num2}', function ($num1,$num2) {
+    return "ผลรวมของเลข $num1 และ $num2 คือ ".($num1+$num2);
 });
